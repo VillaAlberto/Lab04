@@ -3,7 +3,10 @@ package it.polito.tdp.lab04;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 
+import org.jgrapht.alg.drawing.model.MapLayoutModel2D;
+
 import it.polito.tdp.lab04.FXMLController;
+import it.polito.tdp.lab04.model.Model;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,10 +26,8 @@ public class EntryPoint extends Application {
 
         controller = loader.getController();
     	
-        /*
-		 * Create and set the model here!
-		 */
-		// controller.setModel();
+        Model model= new Model();
+		controller.setModel(model);
         
         
         stage.setTitle("JavaFX and Maven");
